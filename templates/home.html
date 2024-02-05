@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!--<link rel="stylesheet" href="{% static 'styles.css' %}">-->
+<h1>Welcome to Metro Balderas!</h1>
+<p>We offer a wide range of delicious Mexican dishes. Check out our menu for more information!</p>
+<h1>About Us</h1>
+<p style="letter-spacing: 2px; word-spacing: 3px; line-height: 1.2;"> 
+  Celebrating Tradition, One Plate at a Time
+  
+  Since 1996, Metro Balderas has been a beacon of Mexican culinary tradition in the heart of our community. Our roots run deep, hailing from the bustling streets and vibrant life of the Federal District — the core of Mexico's rich culture and history.
+  
+  <p style="letter-spacing: 2px; word-spacing: 3px; line-height: 1.2;">Here, in our cozy corner, we bring to life the essence of the Federal District, a place where every dish tells a story and every flavor transports you to a world of color, spice, and soul.
+  
+    Our Cuisine 
+    
+    Our menu is a tribute to the authenticity of Mexican cuisine from the Federal District. Each recipe has been passed down through generations and stands as a testament to the timeless appeal of Mexican culinary artistry. We pride ourselves on using the freshest local ingredients, just as we would in the markets of Mexico City, to create dishes that resonate with the harmonious blend of indigenous and Spanish influences.
+    
+    </p>
+  </p>
+  <h3 style="text-decoration: underline; letter-spacing: 2px; word-spacing: 3px;">Our Journey</h3>
+  <div class="journey">
+    
+  <p style="letter-spacing: 2px; word-spacing: 3px; line-height: 1.2; width: 50%;">Metro Balderas's journey began as a family-owned eatery,
+     founded by los Guzmans, who dreamed of sharing their passion for the Mexican cuisine of their hometown. Since then, our family 
+     has grown along with our business, but the heart of our mission remains the same — to serve meals that not only nourish the body
+      but also warm the soul. We're more than just a restaurant; we're a gathering place for family and friends, old and new.
+      Our doors are open to all who seek a taste of genuine Mexican hospitality and a slice of the Federal District's culinary heritage.
+  
+    </p>
+    <img src="../../media/logo.jpg" class="metro-logo" alt="logo">
+  </div>
+  
+
+    
+  
+
+
+<!-- <section aria-label="Photos of Owners"> -->
+    <!-- <div class="carousel">
+      <button type="button" class="carousel-button prev">&#10232;</button>
+      <button type="button" class="carousel-button next">&#10233;</button>
+      <ul >
+        <li class="slide active" >
+          <img src="../../media/Home1.jpg" alt="Slide 1">
+        </li>
+        <li class="slide">
+          <img src="../../media/Home2.jpg" alt="Slide 2">
+        </li>
+        <li class="slide">
+          <img src="../../media/Home3.jpg" alt="Slide 3">
+        </li>
+      </ul>
+    </div> -->
+    <div class="carousel">
+      <div class="carousel-button prev">‹</div>
+      <div class="carousel-button next">›</div>
+      <div class="slide"><img src="../../media/food1.jpg" alt="Slide 2"></div>
+      <div class="slide carousel-active"><img src="../../media/food2.jpg" alt="Slide 1"></div>
+      <div class="slide"><img src="../../media/food3.jpg" alt="Slide 3"></div>
+      <div class="slide"><img src="../../media/food4.jpg" alt="Slide 3"></div>
+      <div class="slide"><img src="../../media/food5.jpg" alt="Slide 3"></div>
+      <div class="slide"><img src="../../media/food6.png" alt="Slide 3"></div>
+      <div class="slide"><img src="../../media/food7.jpg" alt="Slide 3"></div>
+      <div class="slide"><img src="../../media/food8.jpg" alt="Slide 3"></div>
+      <!-- ... other slides ... -->
+  </div>
+  
+  <!-- </section> -->
+
+  
+{% endblock %}

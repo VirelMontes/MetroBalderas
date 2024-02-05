@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Menu{% endblock %}
+
+
+
+{% block content %}
+<h1>Product Catalog</h1>
+     
+    <ul class="product-list">
+        {% for product in products %}
+            <li class="product-item">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}" width="200" height="150">
+                <h2>{{ product.name }}</h2>
+                <p>{{ product.description }}</p>
+                <p>Price: ${{ product.price }}</p>
+                <br>ID: {{product.id}}</br>
+                <a href="#" class="buy-now-button">Buy Now</a>
+                <a class="buy-now-button" href="{% url 'add_to_cart' product.id %}">Add to Cart</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+
+
+
+
+{% endblock%}

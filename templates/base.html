@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <link rel="icon" href="../../media/train.ico" type="image/png" >
+    <link rel="shortcut icon" href="../../media/train.ico" type="image/png" >
+    <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'comeon.css' %}">
+    
+    
+    <!-- <a href="https://www.flaticon.com/free-icons/mrt" title="mrt icons">Mrt icons created by zero_wing - Flaticon</a>  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    
+  <div class="subway">
+    <div class="train">
+      <div class="window"></div>
+      <div class="window-mid"></div>
+      <div class="window-right"></div>
+      <!-- You can add more windows or other elements here -->
+  </div>
+  <div class="train">
+    <div class="window"></div>
+    <div class="window-mid"></div>
+    <div class="window-right"></div>
+    <!-- You can add more windows or other elements here -->
+  </div>
+  <div class="train">
+    <div class="window"></div>
+    <div class="window-mid"></div>
+    <div class="window-right"></div>
+    <!-- You can add more windows or other elements here -->
+  </div>
+  <div class="train">
+    <div class="window"></div>
+    <div class="window-mid"></div>
+    <div class="window-right"></div>
+    <!-- You can add more windows or other elements here -->
+  </div>
+  <div class="train">
+    <div class="window"></div>
+    <div class="window-mid"></div>
+    <div class="window-right"></div>
+    <!-- You can add more windows or other elements here -->
+  </div>
+  <div class="train">
+    <div class="window"></div>
+    <div class="window-mid"></div>
+    <div class="window-right"></div>
+    <!-- You can add more windows or other elements here -->
+  </div>
+  <div class="train">
+    <div class="window"></div>
+    <div class="window-mid"></div>
+    <div class="window-right"></div>
+    <!-- You can add more windows or other elements here -->
+  </div>
+  </div>
+
+    
+    <nav class="navbar navbar-expand-lg ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Metro Balderas</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'catering' %}">Catering</a>
+            </li>
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'login' %}">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+            </li>
+            {% endif %}
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Locations
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'Reseda' %}">Reseda</a></li>
+                <li><a class="dropdown-item" href="{% url 'Panorama_City' %}">Panorama City</a></li>
+                <li><a class="dropdown-item" href="{% url 'Glendale' %} ">Glendale</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <div class="form-inline my-2 my-lg-0">
+                
+                <a href="{% url 'checkout' %}">
+                 <img  id="cart-icon" src="../../media/cart.png">
+               </a>
+               <p id="cart-total">0</p>
+       
+             </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+      
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+    
+    <footer>
+      <h3 style="text-decoration: underline; letter-spacing: 2px; word-spacing: 3px; width: 10%; margin-left: auto; margin-right: auto;">   Join Us</h3>
+  <p style="letter-spacing: 2px; word-spacing: 3px; line-height: 1.2; width: 80%; margin-left: auto; margin-right: auto;">Our Community
+    
+ 
+    
+    As we continue to celebrate over two decades of tradition and taste, we invite you to join us at Metro Balderas. Come savor the flavors of our history and become a part of our story.
+    
+    Bienvenidos a nuestro pedacito de México!</p><hr width="95%">
+      <section class="footer-flex">
+        <a href="https://www.facebook.com/MetroEBalderas" class="btn btn-primary social_media_button">
+          <i class="fab fa-facebook-f"></i> Facebook
+      </a>
+      <a href="https://www.instagram.com/yourinstagram/" class="btn btn-danger social_media_button">
+          <i class="fab fa-instagram"></i> Instagram
+      </a>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+	  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <script src="{% static 'app.js' %}" defer></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+
+<h2>Profile</h2>
+
+<p>Hello, {{ user.username }}!</p>
+
+
+<p>Your phone number is: {{ user.phone_number }}</p>
+
+<p>Your email is: {{ user.email }}</p>
+
+<p>Your delivery address is:</p>
+
+<p>{{ user.home_address.line1 }}</p>
+<p>{{ user.home_address.line2 }}</p>
+<p>{{ user.home_address.city }}, {{ user.home_address.state }} {{ user.home_address.zip_code }}</p>
+
+{% endblock %}
